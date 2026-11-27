@@ -14,3 +14,39 @@ nav a { color:#c5a880; text-decoration:none; font-weight:bold; }
 .box { background:#1b1d22; border:1px solid #2c303a; border-radius:6px; padding:20px; margin-top:28px; }
 .box h2 { font-size:1rem; color:#c5a880; border-bottom:1px solid #2c303a; padding-bottom:8px; margin:0 0 12px; }
 footer { text-align:center; font-size:0.8rem; color:#6b7280; margin-top:40px; padding-top:20px; border-top:1px solid #2c303a; }
+/* 記事内ページ送りボタン */
+.post-pagination {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #3a3f4b;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.post-pagination .page-label {
+  color: #b8bec9;
+  font-size: 0.9rem;
+  margin-right: 0.3rem;
+}
+.post-pagination .page-num {
+  display: inline-block;
+  padding: 0.4rem 0.85rem;
+  border: 1px solid #d4af37;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  background: transparent;
+  color: #d4af37;
+  transition: all 0.2s;
+}
+.post-pagination button.page-num:hover {
+  background: rgba(212, 175, 55, 0.2);
+}
+.post-pagination span.page-num.active {
+  background: #d4af37;
+  color: #1e2128;
+  cursor: default;
+}
