@@ -1,4 +1,3 @@
-[2017-07-25-thai-uranai.md](https://github.com/user-attachments/files/35494448/2017-07-25-thai-uranai.md)
 ---
 layout: post
 title: タイの占い フランス通信社(APF)の見解 GINの見解
