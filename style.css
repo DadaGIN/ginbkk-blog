@@ -50,17 +50,18 @@ footer { text-align:center; font-size:0.8rem; color:#6b7280; margin-top:40px; pa
   color: #1e2128;
   cursor: default;
 }
-/* ヘッダーのメニューボタン */
+/* ヘッダーのメニューボタン（文字サイズ拡大版） */
 .main-nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 14px;
+  gap: 10px;
+  margin-top: 16px;
 }
 .nav-btn {
   display: inline-block;
-  padding: 6px 14px;
-  font-size: 0.85rem;
+  padding: 8px 16px;
+  font-size: 0.98rem;
+  font-weight: bold;
   color: #e8e6e1;
   background-color: #252830;
   border: 1px solid #454a57;
@@ -72,6 +73,14 @@ footer { text-align:center; font-size:0.8rem; color:#6b7280; margin-top:40px; pa
   border-color: #c5a880;
   color: #c5a880;
 }
+.nav-btn-accent {
+  border-color: #c5a880;
+  color: #c5a880;
+}
+.nav-btn-accent:hover {
+  background-color: #c5a880;
+  color: #181a20;
+}
 /* ご意見・お問い合わせボタンの強調 */
 .nav-btn-accent {
   border-color: #c5a880;
@@ -80,4 +89,36 @@ footer { text-align:center; font-size:0.8rem; color:#6b7280; margin-top:40px; pa
 .nav-btn-accent:hover {
   background-color: #c5a880;
   color: #181a20;
+}
+/* カテゴリー絞り込みバー */
+.cat-filter-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #323642;
+}
+.cat-btn {
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  color: #b8bec9;
+  background-color: #1e2128;
+  border: 1px solid #3a3f4b;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.cat-btn:hover {
+  border-color: #c5a880;
+  color: #e8e6e1;
+}
+.cat-btn.active {
+  background-color: #c5a880;
+  color: #181a20;
+  border-color: #c5a880;
+  font-weight: bold;
+}
+.cat-label {
+  color: #c5a880;
 }
