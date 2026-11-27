@@ -50,3 +50,34 @@ footer { text-align:center; font-size:0.8rem; color:#6b7280; margin-top:40px; pa
   color: #1e2128;
   cursor: default;
 }
+/* ヘッダーのメニューボタン */
+.main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+.nav-btn {
+  display: inline-block;
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  color: #e8e6e1;
+  background-color: #252830;
+  border: 1px solid #454a57;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.nav-btn:hover {
+  border-color: #c5a880;
+  color: #c5a880;
+}
+/* ご意見・お問い合わせボタンの強調 */
+.nav-btn-accent {
+  border-color: #c5a880;
+  color: #c5a880;
+}
+.nav-btn-accent:hover {
+  background-color: #c5a880;
+  color: #181a20;
+}
