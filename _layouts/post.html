@@ -4,6 +4,50 @@ layout: default
 <article class="box" style="margin-top:0;">
   <div class="meta">{{ page.date | date: "%Y.%m.%d" }} ｜ {{ page.category }}</div>
   <h1 style="font-size:1.35rem; margin:8px 0 20px;">{{ page.title }}</h1>
-  <div style="color:#e8e6e1; font-size:0.98rem;">{{ content }}</div>
+  <div id="post-content-area" style="color:#e8e6e1; font-size:0.98rem;">{{ content }}</div>
+  <div id="post-pagination" class="post-pagination"></div>
 </article>
 <p style="margin-top:20px;"><a href="{{ '/' | relative_url }}" style="color:#c5a880;">← 記事一覧へ戻る</a></p>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const contentArea = document.getElementById("post-content-area");
+  const paginationArea = document.getElementById("post-pagination");
+  if (!contentArea || !paginationArea) return;
+
+  const rawHtml = contentArea.innerHTML;
+  const pages = rawHtml.split(/<!--\s*nextpage\s*-->/i);
+
+  if (pages.length <= 1) return;
+
+  let currentPage = 0;
+
+  function renderPage(index) {
+    currentPage = index;
+    contentArea.innerHTML = pages[index];
+    renderButtons();
+    contentArea.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  function renderButtons() {
+    let html = '<span class="page-label">ページ:</span>';
+    for (let i = 0; i < pages.length; i++) {
+      if (i === currentPage) {
+        html += `<span class="page-num active">${i + 1}</span>`;
+      } else {
+        html += `<button type="button" class="page-num" data-page="${i}">${i + 1}</button>`;
+      }
+    }
+    paginationArea.innerHTML = html;
+
+    paginationArea.querySelectorAll("button.page-num").forEach(btn => {
+      btn.addEventListener("click", function() {
+        renderPage(parseInt(this.getAttribute("data-page"), 10));
+      });
+    });
+  }
+
+  contentArea.innerHTML = pages[0];
+  renderButtons();
+});
+</script>
