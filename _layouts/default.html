@@ -12,18 +12,31 @@
   <header>
     <h1><a href="{{ '/' | relative_url }}" style="color:#fff;text-decoration:none;">{{ site.title }}</a></h1>
     <div class="sub">{{ site.description }}</div>
-    <nav>
-      <a href="{{ '/' | relative_url }}">TOP</a>
-      <a href="#profile">プロフィール</a>
-      <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+    <nav class="main-nav">
+      <a href="{{ '/' | relative_url }}" class="nav-btn">TOP</a>
+      <a href="https://example.com" target="_blank" rel="noopener noreferrer" class="nav-btn">SNS一覧</a>
+      <a href="https://din-speil.com" target="_blank" rel="noopener noreferrer" class="nav-btn">ホームページ</a>
+      <a href="https://example.com" target="_blank" rel="noopener noreferrer" class="nav-btn nav-btn-accent">ご意見・お問い合わせ</a>
     </nav>
   </header>
+
   <main>{{ content }}</main>
+
   <section id="profile" class="box">
     <h2>GIN プロフィール</h2>
     <p style="font-size:0.9rem;color:#b8bec9;margin:0;">タイとの出会いは駐在で派遣されてから。現在は幼少期からの能力を活かし悩みの相談役をしております。</p>
   </section>
-  <footer>© 2026 霊能者GIN 語り草 語り種</footer>
+
+  <footer>
+    <div style="margin-bottom: 10px;">
+      <a href="{{ '/feed.xml' | relative_url }}" style="color:#c5a880; text-decoration:none; font-size:0.85rem;">RSSフィード</a>
+    </div>
+    <div>Copyright© <span id="copyright-year">2026</span> Din SpeiL All Rights Reserved.</div>
+  </footer>
 </div>
+
+<script>
+  document.getElementById("copyright-year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
