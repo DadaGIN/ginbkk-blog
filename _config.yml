@@ -1,0 +1,9 @@
+title: "霊能者ＧＩＮの考え方・気づきの語り種"
+description: "心の健康は心とカラダの健康 — Din SpeiL"
+baseurl: "/ginbkk-blog"
+url: "https://github.io"
+
+plugins:
+  - jekyll-feed
+
+permalink: /:year/:month/:day/:title/
