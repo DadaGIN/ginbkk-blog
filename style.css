@@ -122,3 +122,102 @@ footer { text-align:center; font-size:0.8rem; color:#6b7280; margin-top:40px; pa
 .cat-label {
   color: #c5a880;
 }
+/* =========================================
+   記事本文内の装飾（#post-content-area）
+   ========================================= */
+
+/* 段落（文章のまとまり）と行間のゆとり */
+#post-content-area p {
+  line-height: 1.9;
+  margin-bottom: 1.5em;
+  letter-spacing: 0.03em;
+}
+
+/* 大見出し（## で書く見出し）：左に太いゴールド線＋背景帯 */
+#post-content-area h2 {
+  font-size: 1.25rem;
+  color: #ffffff;
+  background-color: #252830;
+  border-left: 5px solid #c5a880;
+  padding: 10px 14px;
+  margin: 2.4em 0 1.1em;
+  border-radius: 0 4px 4px 0;
+  line-height: 1.5;
+}
+
+/* 中見出し（### で書く見出し）：ゴールドの下線 */
+#post-content-area h3 {
+  font-size: 1.1rem;
+  color: #c5a880;
+  border-bottom: 1px solid #454a57;
+  padding-bottom: 6px;
+  margin: 2em 0 0.9em;
+  line-height: 1.5;
+}
+
+/* 小見出し（#### で書く見出し）：左に小さなゴールドの飾り点 */
+#post-content-area h4 {
+  font-size: 1.02rem;
+  color: #e8e6e1;
+  margin: 1.6em 0 0.7em;
+  padding-left: 12px;
+  position: relative;
+}
+#post-content-area h4::before {
+  content: "◆";
+  color: #c5a880;
+  font-size: 0.8rem;
+  position: absolute;
+  left: 0;
+  top: 2px;
+}
+
+/* 箇条書きリスト（- で書くリスト） */
+#post-content-area ul,
+#post-content-area ol {
+  background-color: #1c1f26;
+  border: 1px solid #323642;
+  border-radius: 6px;
+  padding: 14px 20px 14px 34px;
+  margin: 1.4em 0;
+  line-height: 1.8;
+}
+#post-content-area li {
+  margin-bottom: 6px;
+}
+#post-content-area li:last-child {
+  margin-bottom: 0;
+}
+
+/* 引用枠（> で書く枠） */
+#post-content-area blockquote {
+  border-left: 3px solid #7a8294;
+  background-color: #1c1f26;
+  color: #b8bec9;
+  padding: 12px 16px;
+  margin: 1.5em 0;
+  border-radius: 0 4px 4px 0;
+  font-size: 0.94rem;
+}
+
+/* 太字（**文字**）の強調 */
+#post-content-area strong {
+  color: #f3e5ab;
+  font-weight: bold;
+}
+
+/* 記事内のリンク */
+#post-content-area a {
+  color: #c5a880;
+  text-decoration: underline;
+}
+#post-content-area a:hover {
+  color: #ffffff;
+}
+
+/* 区切り線（---） */
+#post-content-area hr {
+  border: none;
+  border-top: 1px dashed #454a57;
+  margin: 2.2em 0;
+}
