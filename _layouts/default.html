@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title | default: site.title }}</title>
+  <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+  {% feed_meta %}
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1><a href="{{ '/' | relative_url }}" style="color:#fff;text-decoration:none;">{{ site.title }}</a></h1>
+    <div class="sub">{{ site.description }}</div>
+    <nav>
+      <a href="{{ '/' | relative_url }}">TOP</a>
+      <a href="#profile">プロフィール</a>
+      <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+    </nav>
+  </header>
+  <main>{{ content }}</main>
+  <section id="profile" class="box">
+    <h2>GIN プロフィール</h2>
+    <p style="font-size:0.9rem;color:#b8bec9;margin:0;">タイとの出会いは駐在で派遣されてから。現在は幼少期からの能力を活かし悩みの相談役をしております。</p>
+  </section>
+  <footer>© 2026 霊能者GIN 語り草 語り種</footer>
+</div>
+</body>
+</html>
